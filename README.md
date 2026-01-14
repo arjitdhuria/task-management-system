@@ -83,10 +83,24 @@ The project focuses on clean UI/UX, secure authentication, proper API design, an
 - Filter tasks by status, priority, and category
 - Search tasks by title
 - Responsive card-based task layout
+
+### API & Documentation
+- RESTful backend APIs
+- Swagger UI for API testing and documentation
   
 Future enhancements:
   1. Inline task editing
   2. Dark mode support
+
+### Live Demo
+   **Frontend (Vercel):**  
+  https://task-management-system-seven-gilt.vercel.app
+
+- **Backend (Render):**  
+  https://task-management-backend-vo99.onrender.com
+
+- **API Documentation (Swagger):**  
+  https://task-management-backend-vo99.onrender.com/api-docs
      
 ## Challenges and Solutions
 1. JWT Authentication & Protected Routes
@@ -94,7 +108,7 @@ Future enhancements:
 Challenge: Maintaining authentication state after page refresh and protecting routes.
 Solution: Used JWT stored in localStorage and restored authentication state using React Context.
 
-2. API Documentation for Secured Endpoints
+2. AMongoDB Connection Timeout
 
-Challenge: Testing JWT-protected APIs in Swagger.
-Solution: Configured Swagger with bearer authentication and tested secured routes using the Authorize feature.
+Challenge: Backend failed to connect on Render.
+Solution: Enabled 0.0.0.0/0 IP access(allowed access from anywhere) and corrected MongoDB credentials.
