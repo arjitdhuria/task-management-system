@@ -4,7 +4,7 @@ require("dotenv").config();
 
 // Swagger imports
 const swaggerUi = require("swagger-ui-express");
-const swaggerSpec = require("../swagger/swagger");
+const swaggerSpec = require("./swagger/swagger");
 
 const authRoutes = require("./routes/auth.routes");
 const taskRoutes = require("./routes/task.routes");
