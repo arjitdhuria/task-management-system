@@ -22,12 +22,17 @@ The project focuses on clean UI/UX, secure authentication, proper API design, an
    ```run in terminal
    git clone <https://github.com/arjitdhuria/task-management-system.git>
    ```
-   Navigate to backend: cd backend
+   Navigate to backend:
+   ```run in terminal
+   cd backend
    
-2. Install dependencies: npm install
+2. Install dependencies:
+    ```run in terminal
+    npm install
    
 3. Setup database:
    create .env file in backend directory and add
+   ```
     PORT=5000
     MONGO_URI=your_mongodb_connection_string
     JWT_SECRET=your_secret_key
@@ -35,21 +40,28 @@ The project focuses on clean UI/UX, secure authentication, proper API design, an
 4. Run migrations: NOT REQUIRED
    
 5. Start server:
+   ```
    npm run dev
 
 ### Frontend Setup
 
 1. Navigate to frontend directory:
+   ```
    cd frontend
-2. Install dependencies: npm install
+2. Install dependencies:
+   ```
+   npm install
 3. Configure API endpoints:
    Open the file:
+   ```
    src/services/api.js
-
+   ```
    Update the baseURL to point to the backend API:
-
+   
    baseURL: "http://localhost:5000/api"
-4. Start development server: npm run dev
+4. Start development server:
+   ```
+   npm run dev
 
 ## Features Implemented
 
