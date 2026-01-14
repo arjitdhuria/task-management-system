@@ -5,13 +5,6 @@ const router = express.Router();
 
 /**
  * @swagger
- * tags:
- *   name: Auth
- *   description: Authentication APIs
- */
-
-/**
- * @swagger
  * /api/auth/register:
  *   post:
  *     summary: Register a new user
@@ -29,18 +22,15 @@ const router = express.Router();
  *             properties:
  *               name:
  *                 type: string
- *                 example: John Doe
  *               email:
  *                 type: string
- *                 example: john@example.com
  *               password:
  *                 type: string
- *                 example: password123
  *     responses:
  *       201:
  *         description: User registered successfully
  *       400:
- *         description: User already exists or invalid data
+ *         description: User already exists
  */
 router.post("/register", register);
 
@@ -62,17 +52,16 @@ router.post("/register", register);
  *             properties:
  *               email:
  *                 type: string
- *                 example: john@example.com
  *               password:
  *                 type: string
- *                 example: password123
  *     responses:
  *       200:
  *         description: Login successful
- *       401:
+ *       400:
  *         description: Invalid credentials
  */
 router.post("/login", login);
 
 module.exports = router;
+
 

@@ -10,7 +10,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:5000",
+        url: "https://task-management-backend-vo99.onrender.com",
       },
     ],
     components: {
@@ -22,13 +22,11 @@ const options = {
         },
       },
     },
-    security: [
-      {
-        bearerAuth: [],
-      },
-    ],
   },
-  apis: ["./routes/*.js"], // adjust if your routes folder path differs
+
+  apis: ["./src/routes/*.js"],
 };
 
-module.exports = swaggerJSDoc(options);
+const swaggerSpec = swaggerJSDoc(options);
+
+module.exports = swaggerSpec;
