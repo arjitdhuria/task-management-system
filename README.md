@@ -89,8 +89,9 @@ The project focuses on clean UI/UX, secure authentication, proper API design, an
 - Swagger UI for API testing and documentation
   
 Future enhancements:
-  1. Inline task editing
-  2. Dark mode support
+  1. Multi language support
+  2. Dashboard analytics- Progress of a person(daily/weekly).
+  3. Dark mode support
 
 ### Live Demo
  - **Frontend (Vercel):**  
