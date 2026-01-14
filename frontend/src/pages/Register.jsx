@@ -20,7 +20,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      await API.post("/auth/register", form);
+      await API.post("/api/auth/register", form);
       navigate("/");
     } catch {
       setError("Registration failed. Try again.");
