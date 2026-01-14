@@ -20,7 +20,16 @@ export default function Register() {
     setLoading(true);
 
     try {
-      await API.post("/auth/register", form);
+      await API.post(
+        "/auth/register",
+        form,
+        {
+            headers: {
+            "Content-Type": "application/json",
+            },
+        }
+        );
+
       navigate("/");
     } catch {
       setError("Registration failed. Try again.");

@@ -2,9 +2,9 @@ import axios from "axios";
 
 const API = axios.create({
   baseURL: "https://task-management-backend-vo99.onrender.com/api",
-  headers: {
-    "Content-Type": "application/json",
-  },
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
 });
 
 // Add token ONLY for protected routes
