@@ -11,15 +11,17 @@ const taskRoutes = require("./routes/task.routes");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5174",
-      "https://task-management-system-seven-gilt.vercel.app/"
-    ],
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: [
+    "http://localhost:5174",
+    "https://task-management-system-seven-gilt.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 
@@ -33,6 +35,7 @@ app.use("/api/tasks", taskRoutes);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 module.exports = app;
+
 
 
 
