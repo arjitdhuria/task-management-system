@@ -93,7 +93,7 @@ Future enhancements:
   2. Dark mode support
 
 ### Live Demo
-   **Frontend (Vercel):**  
+ - **Frontend (Vercel):**  
   https://task-management-system-seven-gilt.vercel.app
 
 - **Backend (Render):**  
@@ -108,7 +108,7 @@ Future enhancements:
 Challenge: Maintaining authentication state after page refresh and protecting routes.
 Solution: Used JWT stored in localStorage and restored authentication state using React Context.
 
-2. AMongoDB Connection Timeout
+2. A MongoDB Connection Timeout
 
 Challenge: Backend failed to connect on Render.
 Solution: Enabled 0.0.0.0/0 IP access(allowed access from anywhere) and corrected MongoDB credentials.
